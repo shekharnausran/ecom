@@ -80,12 +80,10 @@ h5.card-title {
 }
 p.card-text {
   margin: 8px 0;
-  line-height: normal;
-  font-size: 13px;
+  line-height: 30px;
+  font-size: 23px;
   color: #f9941d;
-}
-p.card-text.rating i {
-  margin-right: 5px;
+  letter-spacing: 3px;
 }
 .card-body h6 {
   font-weight: 600;

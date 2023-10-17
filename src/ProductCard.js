@@ -32,8 +32,12 @@ const ProductCard =({id,image,title,price, category, rating})=>{
               
         
       }
-      
-    
+    const ratingCount = rating.rate
+    let ratingIcon = ""
+    for (let i = 0; i < ratingCount; i++){
+        ratingIcon += "★"
+    }
+
     return(
         <>
             <div className='col-3' key={id}>
@@ -45,8 +49,7 @@ const ProductCard =({id,image,title,price, category, rating})=>{
             />
             <div className="card-body">
                 <h5 className="card-title">{title}</h5>
-                
-                 <p className="card-text rating"><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i></p>  
+                <p className="card-text rating">{ratingIcon}</p>  
                 <h6>Rs {price}</h6>
                 <div className="btn_group">
                 <button type="button" className="btn btn-primary" disabled={disabled} onClick={decInputValue}>-</button>
